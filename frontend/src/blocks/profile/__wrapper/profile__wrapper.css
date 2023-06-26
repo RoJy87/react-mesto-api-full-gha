@@ -1,0 +1,11 @@
+.profile__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+@media (min-width: 768px) {
+  .profile__wrapper {
+    gap: 11px;
+  }
+}

@@ -1,0 +1,12 @@
+.popup__spiner-pic {
+  max-width: 240px;
+  width: 100%;
+  max-height: 240px;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  left: 50.5%;
+  top: 50.5%;
+  transform: translateX(-50%) translateY(-50%);
+}

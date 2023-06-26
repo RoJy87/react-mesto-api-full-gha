@@ -1,0 +1,16 @@
+.confirm__message {
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #000;
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+@media (min-width: 768px) {
+  .confirm__message {
+    font-size: 24px;
+    line-height: 29px;
+  }
+}

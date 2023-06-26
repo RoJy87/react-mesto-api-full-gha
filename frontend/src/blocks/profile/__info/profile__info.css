@@ -1,0 +1,16 @@
+.profile__info {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  transform: translateX(13px);
+  margin-bottom: 32px;
+  gap: 10px;
+}
+
+@media (min-width: 768px) {
+  .profile__info {
+    transform: translateX(0);
+    gap: 18px;
+    margin-bottom: 0;
+  }
+}

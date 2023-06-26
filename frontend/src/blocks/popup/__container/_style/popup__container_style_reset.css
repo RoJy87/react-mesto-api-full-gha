@@ -1,0 +1,9 @@
+.popup__container_style_reset {
+  max-width: none;
+  width: auto;
+  padding: 0;
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+

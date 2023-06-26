@@ -1,0 +1,8 @@
+.header__title_active {
+  height: 100%;
+  padding: 41px 30px 38px;
+  overflow: visible;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity .5s linear, padding .5s linear, height linear;
+}

@@ -1,0 +1,19 @@
+.auth-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  margin: auto;
+  max-width: 282px;
+  width: 100%;
+  padding: 40px 0 22px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+}
+
+@media (min-width: 768px) {
+  .auth-page {
+    max-width: 430px;
+    padding: 34px 36px 37px;
+  }
+}

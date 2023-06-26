@@ -1,0 +1,27 @@
+.popup__save-btn_disabled {
+  display: block;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.21;
+  color: #000;
+  background: #fff;
+  border: 1px solid #000000;
+  border-radius: 2px;
+  margin: 0 auto;
+  width: 238px;
+  min-height: 46px;
+  opacity: 0.2;
+}
+
+.popup__save-btn_disabled:hover {
+  opacity: 0.2;
+}
+
+@media (min-width: 768px) {
+  .popup__save-btn_disabled {
+    width: 358px;
+    min-height: 50px;
+    font-size: 18px;
+    line-height: 1.22;
+  }
+}

@@ -1,0 +1,16 @@
+.place__wrapper-name {
+  display: flex;
+  justify-content: space-between;
+  max-width: 85.5%;
+  padding: 21px 0 26px;
+  align-items: center;
+  margin-left: 21px;
+}
+
+@media (min-width: 768px) {
+  .place__wrapper-name {
+    padding: 23.5px 0 22.5px;
+  }
+
+}
+

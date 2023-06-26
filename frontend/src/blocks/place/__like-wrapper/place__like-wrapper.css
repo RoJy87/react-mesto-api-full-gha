@@ -1,0 +1,5 @@
+.place__like-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 23px;
+}

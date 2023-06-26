@@ -1,0 +1,32 @@
+.header__title {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 0;
+  gap: 24px;
+  background-color: #000;
+  border-bottom: 1px solid rgba(84, 84, 84, 0.7);
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .5s linear, visibility .5s, padding .5s linear, height linear;
+}
+
+@media (min-width: 768px) {
+  .header__title {
+    position: absolute;
+    display: flex;
+    top: 20px;
+    right: 20px;
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 45px 0 41px;
+    border-bottom: none;
+    background-color: transparent;
+    height: 20px;
+    visibility: visible;
+    opacity: 1;
+  }
+}
