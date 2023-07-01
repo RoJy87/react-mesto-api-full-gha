@@ -8,7 +8,7 @@
 
 ## Ссылки на проект
 
-IP-адрес 51.250.12.167
+IP 51.250.12.167
 
 Frontend https://simon.mesto.nomoreparties.sbs/signin
 

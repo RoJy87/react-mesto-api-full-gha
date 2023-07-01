@@ -6,7 +6,6 @@ const mongoose = require('mongoose');
 const cookieParser = require('cookie-parser');
 const { errors } = require('celebrate');
 const cors = require('cors');
-// const cors = require('./middlewares/cors');
 const auth = require('./middlewares/auth');
 const NotFoundError = require('./middlewares/errors/NotFoundError');
 const customErrors = require('./middlewares/errors/customErrors');
@@ -29,7 +28,6 @@ app.use(limiter);
 app.use(helmet());
 app.use(cookieParser());
 app.use(express.json());
-// app.use(cors);
 
 app.use(cors({
   origin: [
