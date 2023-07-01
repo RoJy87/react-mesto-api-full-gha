@@ -9,7 +9,7 @@ function Header({ onClickMenu, isMenuVisible }) {
   return (
     <header className="header">
       <img src={logo} alt="Логотип Место" className="header__logo" />
-      {path === "/react-mesto-auth" && (
+      {path === "/main" && (
         <button
           type="button"
           onClick={handleClickMenu}
@@ -20,13 +20,13 @@ function Header({ onClickMenu, isMenuVisible }) {
           <span className="bar-bot"></span>
         </button>
       )}
-      {path === "/sign-in" && (
-        <Link className="header__link button" to="/sign-up">
+      {path === "/signin" && (
+        <Link className="header__link button" to="/signup">
           Регистрация
         </Link>
       )}
-      {path === "/sign-up" && (
-        <Link className="header__link button" to="/sign-in">
+      {path === "/signup" && (
+        <Link className="header__link button" to="/signin">
           Войти
         </Link>
       )}

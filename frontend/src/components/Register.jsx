@@ -84,7 +84,7 @@ function Register({ isLoadingButton, onRegister }) {
         </button>
         <span className="link">
           Уже зарегистрированы?{" "}
-          <Link className="link button" to="/sign-in">
+          <Link className="link button" to="/signin">
             Войти
           </Link>
         </span>

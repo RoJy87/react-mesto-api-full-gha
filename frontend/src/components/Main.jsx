@@ -55,7 +55,7 @@ function Main({ onLoadingSpinner, ...props }) {
                   card={card}
                   key={card._id}
                   onCardClick={() => props.onCardClick(card)}
-                  onCardLike={() => props.onCardLike(card)}
+                  onCardLike={(isLiked) => props.onCardLike(card, isLiked)}
                   onCardDelete={() => props.onCardDelete(card)}
                 />
               );

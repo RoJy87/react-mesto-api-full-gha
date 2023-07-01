@@ -1,11 +1,20 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { CurrentUserContext } from "../contexts/CurrentUserContext";
 
 function Card({ card, onCardClick, onCardLike, onCardDelete }) {
   const currentUser = React.useContext(CurrentUserContext);
+  const [isOwn, setIsOwn] = useState(false);
+  const [isLiked, setIsLiked] = useState(false);
 
-  const isOwn = card.owner._id === currentUser.id;
-  const isLiked = card.likes.some((i) => i._id === currentUser.id);
+  useEffect(() => {
+    if (card.owner === currentUser._id) {
+      setIsOwn(true);
+    }
+    if (card.likes.some(i => i === currentUser._id)) {
+      setIsLiked(true);
+    } else { setIsLiked(false); }
+  }, [card, currentUser, isOwn, isLiked]);
+
   const cardLikeButtonClassName = `place__like-btn button ${
     isLiked && "place__like-btn_active"
   }`;
@@ -27,7 +36,7 @@ function Card({ card, onCardClick, onCardLike, onCardDelete }) {
               aria-label="Отметить мне нравиться"
               type="button"
               className={cardLikeButtonClassName}
-              onClick={onCardLike}
+              onClick={() => onCardLike(isLiked)}
             ></button>
             <span className="place__like-count">{card.likes.length}</span>
           </div>

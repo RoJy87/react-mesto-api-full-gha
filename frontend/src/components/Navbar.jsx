@@ -10,10 +10,10 @@ function Navbar({ email, onSignOut, isMenuVisible }) {
   return (
     <div
       className={`header__title ${
-        path === "/react-mesto-auth" && isMenuVisible && "header__title_active"
+        path === "/main" && isMenuVisible && "header__title_active"
       }`}
     >
-      {path === "/react-mesto-auth" && (
+      {path === "/main" && (
         <div className="header__menu">
           <span className="header__email">{email}</span>
           <button

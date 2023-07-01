@@ -1,12 +1,22 @@
-export const urlRequest = {
-  baseUrl: "https://nomoreparties.co/v1/cohort-62/",
-  mestoUrl: "https://mesto.nomoreparties.co/v1/cohort-62/",
-  userUrl: "https://mesto.nomoreparties.co/v1/cohort-62/users/me",
-  cardsUrl: "https://mesto.nomoreparties.co/v1/cohort-62/cards",
-  changeAvatarUrl:
-    "https://mesto.nomoreparties.co/v1/cohort-62/users/me/avatar",
-};
+const { NODE_ENV } = process.env;
 
-export const token = "a6b845cf-1ca5-4112-9ba1-70a351e023c9";
+export const urlRequest = {
+  baseUrl:
+    NODE_ENV === "production"
+      ? "https://api.simon.mesto.nomoreparties.sbs"
+      : "http://localhost:3000",
+  userUrl:
+    NODE_ENV === "production"
+      ? "https://api.simon.mesto.nomoreparties.sbs/users/me"
+      : "http://localhost:3000/users/me",
+  cardsUrl:
+    NODE_ENV === "production"
+      ? "https://api.simon.mesto.nomoreparties.sbs/cards"
+      : "http://localhost:3000/cards",
+  changeAvatarUrl:
+    NODE_ENV === "production"
+      ? "https://api.simon.mesto.nomoreparties.sbs/users/me/avatar"
+      : "http://localhost:3000/users/me/avatar",
+};
 
 export const password = "[a-zA-Z0-9!@#$%^&*]{6,16}";
