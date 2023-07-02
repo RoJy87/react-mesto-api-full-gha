@@ -70,7 +70,7 @@ module.exports.login = async (req, res, next) => {
     res.cookie('token', token, {
       maxAge: 3600000 * 24 * 7,
       httpOnly: true,
-      sameSite: true,
+      sameSite: NODE_ENV === 'production' ? true : false,
     }).send(user.hidePassword());
   } catch (err) { next(err); }
 };

@@ -40,21 +40,19 @@ function App() {
   useEffect(() => {
     loadingSpinner(true);
     Auth.getAuthInfo()
-      .then((res) => {
-        if (res) {
-          Promise.all([api.getUserInfo(), api.getItems()]).then(
-            ([userData, cardData]) => {
-              setCurrentUser(userData);
-              setCards(cardData);
-              setEmail(userData.email);
-              setLoggedIn(true);
-              navigate("/", { replace: true });
-            }
-          );
-        }
+      .then(() => {
+        setLoggedIn(true);
+        Promise.all([api.getUserInfo(), api.getItems()])
+        .then(
+          ([userData, cardData]) => {
+            setCurrentUser(userData);
+            setCards(cardData);
+            setEmail(userData.email);
+            navigate("/", { replace: true });
+          });
       })
       .catch((err) => console.log(err))
-      .finally(() => loadingSpinner(false))
+      .finally(() => loadingSpinner(false));
   }, [loggedIn]);
 
   function loadingSpinner(isLoading) {
@@ -168,12 +166,10 @@ function App() {
     if (values.email && values.password) {
       const { email, password } = values;
       Auth.register(email, password)
-        .then((res) => {
-          if (res) {
-            setSuccessful(true);
-            setInfoTooltipPopupOpen(true);
-            navigate("/signin", { replace: true });
-          }
+        .then(() => {
+          setSuccessful(true);
+          setInfoTooltipPopupOpen(true);
+          navigate("/signin", { replace: true });
         })
         .catch((err) => {
           setSuccessful(false);
@@ -193,13 +189,11 @@ function App() {
     }
     const { email, password } = values;
     Auth.authorize(email, password)
-      .then((data) => {
-        if (data) {
-          setEmail(email);
-          setValues({ email: "", password: "" });
-          setLoggedIn(true);
-          navigate("/", { replace: true });
-        }
+      .then(() => {
+        setEmail(email);
+        setValues({ email: "", password: "" });
+        setLoggedIn(true);
+        navigate("/", { replace: true });
       })
       .catch((err) => {
         setSuccessful(false);
