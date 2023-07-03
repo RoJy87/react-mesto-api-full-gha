@@ -10,6 +10,5 @@
 
 IP 51.250.12.167
 
-Frontend https://simon.mesto.nomoreparties.sbs/signin
+Ознакомиться с сайтом: https://simon.mesto.nomoreparties.sbs
 
-Backend https://api.simon.mesto.nomoreparties.sbs/signin
