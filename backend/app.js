@@ -24,7 +24,6 @@ const limiter = rateLimit({
   max: 100,
 });
 
-app.use(limiter);
 app.use(helmet());
 app.use(cookieParser());
 app.use(express.json());
@@ -40,6 +39,7 @@ app.use(cors({
 }));
 
 app.use(requestLogger);
+app.use(limiter);
 
 app.get('/crash-test', () => {
   setTimeout(() => {
